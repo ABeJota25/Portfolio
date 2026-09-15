@@ -7,7 +7,10 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color: var(--c-main-bg);
+}
+
+body {
+   background-color: var(--c-main-bg);
 }
 
 img {
@@ -41,9 +44,10 @@ button {
 --f-link: 900 1.125em "Albert Sans", sans-serif;
 
 /*Colores*/
---c-text: #41280a;
+--c-text: #272523;
 --c-white: #ffffff;
---c-main-bg: #ede8d0;
+--c-main-bg: #f3f3f3;
+--c-brand-allinone: #ee7000;
 
 /*Espaciados*/
 --s-hero: 12rem;
@@ -63,7 +67,7 @@ button {
 --r-xl: 100%;
 --r-lg: 6.25rem;
 --r-md: 2.5rem;
---r-sm: 7px;
+--r-sm: 1rem;
 
 }
 
@@ -153,7 +157,7 @@ button {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19.375rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: var(--s-sm);
 }
 
@@ -180,6 +184,37 @@ button {
     & .ri-arrow-down-s-line{
       font-size: var(--s-xl);
       color: var(--c-text);
+    }
+  }
+}
+
+/*Projects*/
+
+.projects {
+  & .projects__block{
+    & .project {
+      max-width: 40rem;
+      overflow: hidden;
+      padding: 0;
+      transition: .5s transform ease;
+      border-radius: var(--r-sm);
+      &.flex-column{
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      & .project__heading{
+        width: 100%;
+        background-color: var(--c-brand-allinone);
+        color: var(--c-white);
+        &.flex-column{
+          align-items: start;
+          text-align: start;
+          flex-wrap: wrap;
+        }
+      }
+      &:hover{
+        transform: scale(102%);
+      }
     }
   }
 }
