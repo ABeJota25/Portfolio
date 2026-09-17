@@ -36,8 +36,8 @@ button {
 
 /*Fuentes*/
 --f-heading-xl: 900 clamp(3em, 5vw, 4em) "Albert Sans", sans-serif;
---f-heading-lg: 400 clamp(2.25em, 4vw, 3em) "DM Sans", sans-serif;
---f-heading-md: 400 clamp(1.75em, 3vw, 2em) "DM Sans", sans-serif;
+--f-heading-lg: 900 clamp(2.25em, 4vw, 3em) "Albert Sans", sans-serif;
+--f-heading-md: 900 clamp(1.75em, 3vw, 2em) "DM Sans", sans-serif;
 --f-heading-sm: 500 clamp(1.375em, 2vw, 1.5em) "DM Sans", sans-serif;
 --f-heading-xs: 500 clamp(1.125em, 2vw, 1.25em) "DM Sans", sans-serif;
 --f-body: 400 clamp(1em, 1vw, 1.125em) "DM Sans", sans-serif;
@@ -138,6 +138,11 @@ button {
   margin: auto;
 }
 
+.container-project {
+  max-width: var(--mw-xl);
+  margin: auto;
+}
+
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -147,10 +152,9 @@ button {
 }
 
 .flex-column {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   padding: var(--s-sm);
   gap: var(--s-sm);
 }
@@ -180,6 +184,7 @@ button {
   & .hero__block{
     &.flex-column{
       gap: var(--s-hero);
+      text-align: center;
     }
     & .ri-arrow-down-s-line{
       font-size: var(--s-xl);
@@ -199,22 +204,25 @@ button {
       transition: .5s transform ease;
       border-radius: var(--r-sm);
       &.flex-column{
-        flex-wrap: wrap;
         gap: 0;
       }
       & .project__heading{
         width: 100%;
         background-color: var(--c-brand-allinone);
         color: var(--c-white);
-        &.flex-column{
-          align-items: start;
-          text-align: start;
-          flex-wrap: wrap;
-        }
       }
       &:hover{
         transform: scale(102%);
       }
     }
+  }
+}
+
+/*Problem*/
+
+.problem {
+  background-color: var(--c-white);
+  .problem__block{
+    
   }
 }
