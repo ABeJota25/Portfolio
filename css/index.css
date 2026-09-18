@@ -15,7 +15,6 @@ body {
 
 img {
     width: 100%;
-    
 }
 
 a {
@@ -222,7 +221,23 @@ button {
 
 .problem {
   background-color: var(--c-white);
-  .problem__block{
-    
+}
+
+/*Stages*/
+
+.stage {
+  & .stage__block{
+    &.flex-column{
+      gap: var(--s-xl);
+      align-items: center;
+    }
+    & .stage__images{
+      &.flex-column{
+        gap: var(--s-hero);
+      }
+    }
+  }
+  &:nth-child(even){
+    background-color: var(--c-white);
   }
 }
