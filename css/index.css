@@ -231,6 +231,11 @@ button {
       gap: var(--s-xl);
       align-items: center;
     }
+    & .stage__header{
+      &.flex-column{
+        padding: 0;
+      }
+    }
     & .stage__images{
       &.flex-column{
         gap: var(--s-hero);
