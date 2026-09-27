@@ -56,12 +56,12 @@ button {
 --s-sm: 1rem;
 --s-xs: 0.7rem;
 
-/* Max-width */
+/*Max-width*/
 
 --mw-xl: 89vw;
 --mw-lg: 70.25rem;
 
-/* Border radius */
+/*Border radius*/
 
 --r-xl: 100%;
 --r-lg: 6.25rem;
@@ -245,4 +245,11 @@ button {
   &:nth-child(even){
     background-color: var(--c-white);
   }
+}
+
+
+/*Aprendizajes*/
+
+.learnt {
+  background-color: var(--c-white);
 }
