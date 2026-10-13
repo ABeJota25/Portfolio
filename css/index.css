@@ -41,6 +41,7 @@ button {
 --f-heading-xs: 500 clamp(1.125em, 2vw, 1.25em) "DM Sans", sans-serif;
 --f-body: 400 clamp(1em, 1vw, 1.125em) "DM Sans", sans-serif;
 --f-link: 900 1.125em "Albert Sans", sans-serif;
+--f-span: 400 clamp(.7em, 1vw, .9em) "DM Sans", sans-serif;
 
 /*Colores*/
 --c-text: #272523;
@@ -97,6 +98,10 @@ button {
   font: var(--f-body);
 }
 
+.span{
+  font: var(--f-span);
+}
+
 .link {
   font: var(--f-link);
   color: var(--c-text);
@@ -105,27 +110,6 @@ button {
   &:hover, &:active {
     opacity: 0.7;
   }
-}
-
-.btn {
-  font: var(--f-link);
-  padding: var(--s-xs) var(--s-md);
-  border-radius: var(--r-md);
-  transition: transform 0.5s;
-
-  &:hover, &:active {
-    transform: scale(110%);
-  }
-}
-
-.btn--dark {
-  background-color: var(--c-text);
-  color: var(--c-light);
-}
-
-.btn--light {
-  background-color: var(--c-light);
-  color: var(--c-text);
 }
 
 .section {
@@ -248,8 +232,51 @@ button {
 }
 
 
-/*Aprendizajes*/
+/*Aprendizaje*/
 
 .learnt {
   background-color: var(--c-white);
+}
+
+/*Footer*/
+
+.footer {
+  color: var(--c-text);
+  &.section{
+    padding: var(--s-md) var(--s-sm);
+  }
+  & .footer__block{
+    &.flex-column{
+      align-items: center;
+    }
+  }
+}
+
+.footer--white{
+  background-color: var(--c-white);
+}
+
+/*Back to top button*/
+
+#backToTop{
+  font-size: 1.5em;
+  position: fixed;
+  bottom: var(--s-md);
+  right: var(--s-md);
+  width: var(--s-lg);
+  height: var(--s-lg);
+  border-radius: var(--r-xl);
+  box-shadow: 0 0 2px var(--c-text);
+  background-color: var(--c-white);
+  color: var(--c-text);
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s opacity, .5s visibility, .5s transform;
+  &.mostrar{
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover{
+    transform: scale(110%);
+  }
 }
