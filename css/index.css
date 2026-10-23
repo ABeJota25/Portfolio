@@ -121,7 +121,7 @@ button {
   margin: auto;
 }
 
-.container-project {
+.container-wide {
   max-width: var(--mw-xl);
   margin: auto;
 }
@@ -236,6 +236,17 @@ button {
 
 .learnt {
   background-color: var(--c-white);
+}
+
+/*Skills*/
+
+.skills{
+  background-color: var(--c-white);
+  & .skills__block{
+    & .text--sm{
+      font-weight: 400;
+    }
+  }
 }
 
 /*Footer*/
